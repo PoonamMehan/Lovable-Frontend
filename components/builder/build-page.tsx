@@ -51,7 +51,7 @@ const BuilderPage = ({
   const router = useRouter();
 
   useEffect(() => {
-    const socket = io("http://localhost:3000");
+    const socket = io("http://localhost:3001");
     socketRef.current = socket;
 
     socket.on("connect", () => {

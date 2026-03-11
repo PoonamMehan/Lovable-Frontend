@@ -7,7 +7,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     Resend({
-      from: "no-reply@pomogolo.ninja",
+      from: "onboarding@resend.dev",
     }),
   ],
   session: {

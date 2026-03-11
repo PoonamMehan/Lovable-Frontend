@@ -43,7 +43,7 @@ export default function Builder({ params }: BuilderProps) {
     const startProject = async (id: string) => {
       toast.promise<{ projectId: string }>(
         async () => {
-          const res = await axios.get(`http://localhost:3000/startProject/${id}`, {
+          const res = await axios.get(`http://localhost:3001/startProject/${id}`, {
             headers: {
               userId: session?.user?.id,
             },
@@ -86,7 +86,7 @@ export default function Builder({ params }: BuilderProps) {
     if (!sandBoxId || !projectId) return;
 
     try {
-      const res = await axios.post("http://localhost:3000/files", {
+      const res = await axios.post("http://localhost:3001/files", {
         sandboxId: sandBoxId,
         projectId,
         userId: session?.user?.id,
